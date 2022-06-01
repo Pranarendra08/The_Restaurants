@@ -4,9 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/drawable/ic_logo.xml" value="0.1165" />
+        <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/drawable/shape_rectangle_blue.xml" value="0.118" />
+        <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/drawable/shape_rectangle_white.xml" value="0.1175" />
         <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/drawable/splash_screen.xml" value="0.1165" />
-        <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/layout/activity_splash_screen.xml" value="0.1884498480243161" />
+        <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/layout/fragment_fragment1.xml" value="0.264" />
+        <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/layout/fragment_fragment2.xml" value="0.4" />
+        <entry key="..\:/ZzzRENDRA/KSM ANDROID/Final Project/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

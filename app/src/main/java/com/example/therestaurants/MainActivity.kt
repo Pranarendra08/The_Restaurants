@@ -2,7 +2,6 @@ package com.example.therestaurants
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.therestaurants.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +13,21 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_TheRestaurants)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initViews()
 
-//        supportActionBar?.hide()
+        supportActionBar?.hide()
+    }
+
+    private fun initViews() {
+        with(binding) {
+
+            val fragmentOne = fragment1()
+            val fragmentTwo = fragment2()
+            supportFragmentManager.beginTransaction().apply {
+                replace(fcvFragment1.id, fragmentOne)
+                addToBackStack(null)
+                commit()
+            }
+        }
     }
 }
