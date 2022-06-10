@@ -2,6 +2,8 @@ package com.example.therestaurants
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.therestaurants.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,14 +22,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         with(binding) {
+            val navHostfragment = supportFragmentManager
+                .findFragmentById(fcvFragment1.id) as NavHostFragment
+            val navController = navHostfragment.navController
 
-            val fragmentOne = fragment1()
-            val fragmentTwo = fragment2()
-            supportFragmentManager.beginTransaction().apply {
-                replace(fcvFragment1.id, fragmentOne)
-                addToBackStack(null)
-                commit()
-            }
+            btmNav.setupWithNavController(navController)
         }
     }
 }
