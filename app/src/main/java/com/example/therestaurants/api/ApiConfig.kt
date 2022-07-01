@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
     companion object {
-        fun getApiSevice() : ApiService {
+        fun getApiService() : ApiService {
             val client = OkHttpClient.Builder().build()
 
             val retrofit = Retrofit.Builder()

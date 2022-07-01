@@ -2,9 +2,16 @@ package com.example.therestaurants
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.therestaurants.api.ApiConfig
+import com.example.therestaurants.api.model.ResponseListRestaurant
+import com.example.therestaurants.api.model.RestaurantItem
 import com.example.therestaurants.databinding.ActivityMainBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +29,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         with(binding) {
+
+
+
+
             val navHostfragment = supportFragmentManager
                 .findFragmentById(fcvFragment1.id) as NavHostFragment
             val navController = navHostfragment.navController
@@ -29,4 +40,5 @@ class MainActivity : AppCompatActivity() {
             btmNav.setupWithNavController(navController)
         }
     }
+
 }
