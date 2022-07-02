@@ -7,6 +7,7 @@ import com.bumptech.glide.Glide
 import com.example.therestaurants.api.ApiConfig
 import com.example.therestaurants.api.ApiService
 import com.example.therestaurants.api.model.ResponseDetailRestaurant
+import com.example.therestaurants.api.model.ResponsePhotoRestaurant
 import com.example.therestaurants.databinding.ActivityDetailBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,7 +45,7 @@ class DetailActivity : AppCompatActivity() {
 
                         data?.apply {
                             Glide.with(this@DetailActivity)
-                                .load(data.pictureId)
+                                .load(client.getPhotoRestaurant(data.pictureId.toString()))
                                 .into(ivPhotoRestaurant)
                             tvNama.text = name
                             tvCity.text = city
@@ -55,7 +56,6 @@ class DetailActivity : AppCompatActivity() {
                     setToast()
                 }
             }
-
             override fun onFailure(call: Call<ResponseDetailRestaurant>, t: Throwable) {
                 setToast()
             }

@@ -16,5 +16,5 @@ interface ApiService {
     fun getDetailRestaurant(@Path("id") id: String) : Call<ResponseDetailRestaurant>
 
     @GET("images/large/{pictureId}")
-    fun getPhotoRestaurant(@Path("pictureId") id: String) : Call<ResponsePhotoRestaurant>
+    fun getPhotoRestaurant(@Path("pictureId") pictureId: String) : Call<ResponsePhotoRestaurant>
 }

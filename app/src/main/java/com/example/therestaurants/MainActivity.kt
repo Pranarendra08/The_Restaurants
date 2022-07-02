@@ -29,10 +29,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         with(binding) {
-
-
-
-
             val navHostfragment = supportFragmentManager
                 .findFragmentById(fcvFragment1.id) as NavHostFragment
             val navController = navHostfragment.navController

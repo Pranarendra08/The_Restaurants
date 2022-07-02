@@ -1,5 +1,6 @@
 package com.example.therestaurants.utils
 
+import android.media.Image
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 

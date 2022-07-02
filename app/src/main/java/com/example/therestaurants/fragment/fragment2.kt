@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.therestaurants.R
 import com.example.therestaurants.databinding.FragmentFragment2Binding
 import com.example.therestaurants.utils.User
 
@@ -32,11 +35,14 @@ class fragment2 : Fragment() {
         if (activity != null && context != null) {
             with(binding) {
                 val user = User()
+                Glide.with(this@fragment2)
+                    .load(R.drawable.ic_photo_profile)
+                    .apply(RequestOptions.circleCropTransform())
+                    .into(ivPhotoProfile)
                 tvNama.text = user.nama
                 tvEmail.text = user.email
                 tvTtl.text = user.ttl
             }
         }
     }
-
 }
