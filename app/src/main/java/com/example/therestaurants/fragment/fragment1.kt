@@ -1,7 +1,6 @@
 package com.example.therestaurants.fragment
 
 import android.content.Intent
-import android.nfc.NfcAdapter.EXTRA_ID
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,8 +14,6 @@ import com.example.therestaurants.api.ApiConfig
 import com.example.therestaurants.api.model.ResponseListRestaurant
 import com.example.therestaurants.api.model.RestaurantItem
 import com.example.therestaurants.databinding.FragmentFragment1Binding
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -59,7 +56,8 @@ class fragment1 : Fragment(), RvAdapter.OnItemClickListener {
                                 val restaurantList = response.body()?.restaurants ?: ArrayList()
 
                                 rvListRestaurant.setHasFixedSize(true)
-                                rvListRestaurant.layoutManager = LinearLayoutManager(requireActivity())
+                                rvListRestaurant.layoutManager =
+                                    LinearLayoutManager(requireActivity())
 
                                 val adapter = RvAdapter(ArrayList(restaurantList))
                                 adapter.listener = this@fragment1
@@ -75,7 +73,6 @@ class fragment1 : Fragment(), RvAdapter.OnItemClickListener {
                         }
                     })
                 }
-
             }
         }
     }
